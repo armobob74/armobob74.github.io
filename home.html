@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link  href="static/css/base_style.css" rel="stylesheet"/>
+  
+
+    
+</head>
+<body>
+
+    <div id=whitebox>
+
+        <h2>Never say very!</h2>
+        <p>
+            <span id="sentence"></span>
+        </p>
+        <input id="input_field" type="text" placeholder="Enter a one-word alternative"></input>
+        <p id="message" style="display:None"></p>
+        <div id=buttons>
+        <button id="enter_button" class='btn btn-success' onclick="check_answer()">Submit</button>
+        <button class='btn btn-secondary' onclick="show_alternatives()">Give Up</button>
+        </div>
+
+    </div>
+<script type="text/javascript" src="static/javascript/main_script.js"></script>
+    
+
+</body>
+</html>
