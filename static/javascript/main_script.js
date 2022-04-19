@@ -21,7 +21,7 @@ const spicy_object = {
     },
 
     calm:{
-        alternatives:['collected', 'composed', 'cool', 'coolheaded', 'equal', 'level', 'limpid', 'peaceful', 'placid', 'possessed', 'recollected', 'sedate', 'self-composed', 'self-possessed', 'serene', 'smooth', 'together', 'tranquil', 'undisturbed', 'unperturbed', 'unruffled', 'unshaken','spicy', 'untroubled', 'unworried'],
+        alternatives:['collected', 'composed', 'cool', 'coolheaded', 'equal', 'level', 'limpid', 'peaceful', 'placid', 'possessed', 'recollected', 'sedated', 'self-composed', 'self-possessed', 'serene', 'smooth', 'together', 'tranquil', 'undisturbed', 'unperturbed', 'unruffled', 'unshaken','spicy', 'untroubled', 'unworried'],
         sentence:'I feel <span id="boring_phrase">very calm</span> now that finals week is finally over.',
     },
 
