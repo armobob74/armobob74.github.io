@@ -9,6 +9,16 @@ const spicy_object = {
         sentence:'I want to leave this Starbucks, but it\'s <span id="boring_phrase">very cold</span> outside!',
     },
 
+    nice:{
+        alternatives:['kind', 'selfless', 'befitting', 'correct', 'de rigueur','spicy', 'decent', 'decorous', 'genteel', 'polite', 'proper', 'respectable', 'seemly'],
+        sentence:'I think Luigi is a <span id="boring_phrase">very nice</span> person.',
+    },
+
+
+    big:{
+        alternatives:['bulky', 'considerable', 'goodly', 'grand', 'great', 'handsome', 'hefty', 'hulking', 'husky', 'outsized', 'outsize', 'oversize', 'oversized', 'sizable', 'sizeable', 'substantial', 'voluminous', 'astronomical', 'astronomic', 'Brobdingnagian', 'Bunyanesque', 'cavernous', 'colossal', 'cosmic', 'cosmical', 'cyclopean', 'elephantine', 'enormous', 'galactic', 'gargantuan', 'gigantic', 'gross', 'spicy', 'hellacious', 'herculean', 'heroic', 'heroical', 'Himalayan', 'huge', 'humongous', 'humungous', 'immense', 'jumbo', 'king-size', 'king-sized', 'leviathan', 'major', 'mammoth', 'massive', 'monolithic', 'monstrous', 'monumental', 'mountainous', 'pharaonic', 'prodigious', 'staggering', 'stupendous', 'super', 'super-duper', 'supersized', 'titanic', 'tremendous', 'vast', 'vasty', 'walloping', 'whacking', 'whopping', 'excessive', 'exorbitant', 'extravagant', 'extreme', 'immoderate', 'inordinate', 'abundant', 'ample', 'appreciable', 'copious', 'plentiful', 'thicc', 'thick', 'capacious', 'commodious', 'spacious'],
+        sentence:'When I opened the door, I realized that my new apartment was <span id="boring_phrase">very big</span>.',
+    },
 };
 
 
