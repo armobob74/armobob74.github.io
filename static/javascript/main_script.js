@@ -53,6 +53,8 @@ function check_answer(){
 }
 
 function show_alternatives() {
+        input_field.value=''
+        input_field.style="display:None;"
         message.innerHTML="Next time, try:"
         message.style="display:inline-block"
         for(i in alternatives){

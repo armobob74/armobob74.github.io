@@ -12,9 +12,9 @@ body {
 }
 
 #whitebox{
-    min-height:100vh;
-    margin-top:5vw;
-    margin-bottom:5vw;
+    min-height:90vh;
+    margin-top:0vw;
+    margin-bottom:0vw;
     width:95vw;
     border: solid 1px darkgreen;
     border-radius:10px;
@@ -22,13 +22,16 @@ body {
     display:flex;
     flex-direction:column;
     align-items:center;
+    justify-content:space-around;
 }
 
 #whitebox p{
-margin:10px;
+padding:3vw;
+font-size:3vh;
 }
 
 #whitebox h2{
+    font-size:4vh;
 }
 
 #boring_phrase {
@@ -36,6 +39,21 @@ margin:10px;
 }
 
 #buttons{
-    margin:1em;
+    justify-self:flex-end;
+    height:10vh;
+    margin-bottom: 3vh;
 }
 
+#buttons button{
+    font-size:3vh;
+    margin:0px 10px;
+    height:10vh;
+    width:40vw;
+}
+#input_field{
+
+    font-size:3vh;
+    height:10vh;
+    width:90%;
+
+}
