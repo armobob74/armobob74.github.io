@@ -25,6 +25,21 @@ const spicy_object = {
         sentence:'I feel <span id="boring_phrase">very calm</span> now that finals week is finally over.',
     },
 
+    noisy:{
+        alternatives:['deafening', 'rambunctious', 'rowdy', 'dissonant', 'resounding', 'sonorous', 'clamorous', 'uproarious', 'blatant', 'blaring', 'booming', 'brassy', 'brazen', 'spicy','clanging', 'earsplitting', 'jangly'],
+        sentence:'I couldn\'t sleep because the neighbors were <span id="boring_phrase">very noisy</span> last night.',
+    },
+
+    busy:{
+        alternatives:['swamped', 'tied-up', 'overwhelmed','spicy', 'knee-deep', 'engrossed'],
+        sentence:'I want to go to the game, but I\'m <span id="boring_phrase">very busy</span> this week.',
+    },
+
+    shiny:{
+        alternatives:['gleaming', 'beaming', 'bedazzling', 'brilliant', 'candescent', 'dazzling', 'glowing', 'incandescent', 'lambent', 'lucent', 'lucid', 'luminous', 'lustrous', 'radiant', 'sheeny','spicy', 'shining', 'splendid'],
+        sentence:'The Crystal Palace was <span id="boring_phrase">very shiny</span>!',
+    },
+
 };
 
 
@@ -56,9 +71,16 @@ function check_answer(){
     var answer = input_field.value.toLowerCase().replace(/\s/g,'')
     input_field.value=''
     if(alternatives.includes(answer)){
+        //todo: filter out answer from alternatives so it is not displayed below
+        //todo: select random alternatives rather than the first 3 
         input_field.style="display:None;"
-        message.innerHTML="Good job!"
-        message.style="display:inline-block"
+        message.innerHTML=`Good job! Also consider:
+        <ul class="list-group">
+        <li class="list-group-item">${alternatives[0]}</li>
+        <li class="list-group-item">${alternatives[1]}</li>
+        <li class="list-group-item">${alternatives[2]}</li>
+        </ul>`
+        message.style="display:flex;flex-direction:column;"
         buttons.innerHTML="<button class=\"btn btn-primary\" onclick=\"location.reload()\" >Try Another</button>"
         boring_phrase.innerHTML=answer;
         boring_phrase.class="success";
@@ -71,12 +93,12 @@ function check_answer(){
 function show_alternatives() {
         input_field.value=''
         input_field.style="display:None;"
-        message.innerHTML="Next time, try:"
+        var list_items = ''
         message.style="display:inline-block"
         for(i in alternatives){
-        console.log(alternatives[i])
-        message.innerHTML = message.innerHTML + "<br>" + alternatives[i]
+         list_items = list_items + `<li class="list-group-item">${alternatives[i]}</li>`
         }
+        message.innerHTML = `Next time, try:<ul class="list-group"> ${list_items} </ul>`
         buttons.innerHTML="<button class=\"btn btn-primary\" onclick=\"location.reload()\" >Try Another</button>"
 
 }

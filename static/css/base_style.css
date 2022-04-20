@@ -35,7 +35,7 @@ font-size:3vh;
 }
 
 #boring_phrase {
-    color:hsl(360,50%,50%)
+    color:hsl(360,50%,50%);
 }
 
 #buttons{
@@ -55,5 +55,9 @@ font-size:3vh;
     font-size:3vh;
     height:10vh;
     width:90%;
+    text-align:center;
 
+}
+#message{
+    align-text:center;
 }
