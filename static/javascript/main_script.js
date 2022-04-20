@@ -36,7 +36,7 @@ const spicy_object = {
     },
 
     shiny:{
-        alternatives:['gleaming', 'beaming', 'bedazzling', 'brilliant', 'candescent', 'dazzling', 'glowing', 'incandescent', 'lambent', 'lucent', 'lucid', 'luminous', 'lustrous', 'radiant', 'sheeny','spicy', 'shining', 'splendid'],
+        alternatives:['gleaming', 'beaming', 'bedazzling', 'brilliant', 'candescent', 'dazzling','glistening', 'glowing', 'incandescent', 'lambent', 'lucent', 'lucid', 'luminous', 'lustrous', 'radiant', 'sheeny','spicy', 'shining', 'splendid'],
         sentence:'The Crystal Palace was <span id="boring_phrase">very shiny</span>!',
     },
 
@@ -98,10 +98,27 @@ function check_answer(){
     var answer = input_field.value.toLowerCase().replace(/\s/g,'')
     input_field.value=''
     if(alternatives.includes(answer)){
-        //todo: filter out answer from alternatives so it is not displayed below
-        //todo: select random alternatives rather than the first 3 
+        var answer_index = alternatives.indexOf(answer)
+        alternatives.splice(answer_index,1); // remove 1 value from alternatives starting at index answer_index
         input_field.style="display:None;"
-        message.innerHTML=`Good job! Also consider:${alternatives[0]}, ${alternatives[1]}, or ${alternatives[2]}.`
+        //select 3 alternatives to suggest
+        var i1 = 0; 
+        var i2 = 0; 
+        var i3 = 0; 
+
+        i1 = alternatives.length * Math.random() << 0;
+        alt_1 = alternatives[i1]
+        alternatives.splice(i1,1); //remove the i1 value from alternatives
+
+        i2 = alternatives.length * Math.random() << 0;
+        var alt_2 = alternatives[i2]
+        alternatives.splice(i2,1); //remove the i2 value from alternatives
+
+        i3 = alternatives.length * Math.random() << 0;
+        var alt_3 = alternatives[i3]
+        alternatives.splice(i3,1); //remove the i3 value from alternatives
+
+        message.innerHTML=`Good job! Also consider: ${alt_1}, ${alt_2}, or ${alt_3}.`
         message.style="display:flex;flex-direction:column;"
         buttons.innerHTML="<button class=\"btn btn-primary\" onclick=\"location.reload()\" >Try Another</button>"
         boring_phrase.innerHTML=answer;
