@@ -43,10 +43,37 @@ const spicy_object = {
 };
 
 
-var keys = Object.keys(spicy_object);
-var random_key = keys[keys.length * Math.random() << 0];
-var alternatives = spicy_object[random_key]['alternatives']
+//we will use a cookie to keep track of which words the user has already seen
 
+var keys = Object.keys(spicy_object);
+var keys_not_seen = keys; //assume all keys have not yet been seen
+
+//read cookies
+var all_cookies = document.cookie.split(';')
+for(i in all_cookies){
+    if(all_cookies[i].indexOf('keys_not_seen') != -1){
+      keys_not_seen = all_cookies[i].split('=')[1].split(','); //if cookie exists, update keys_not_seen
+    }
+}
+
+if(keys_not_seen[0] == ""){
+    keys_not_seen = keys //reset
+}
+
+//select a random not_seen key
+var random_key = keys_not_seen[keys_not_seen.length * Math.random() << 0]; //called random_key but is a boring word
+//update the cookie
+var new_cookie = ''
+for(i in keys_not_seen){
+    if(keys_not_seen[i] != random_key){
+        new_cookie = new_cookie + keys_not_seen[i] + ','
+    }
+}
+new_cookie = new_cookie.slice(0,new_cookie.length-1) //get rid of the extra comma at the end there
+
+console.log(keys_not_seen)
+document.cookie = 'keys_not_seen=' + new_cookie;
+var alternatives = spicy_object[random_key]['alternatives']
 var sentence = document.getElementById('sentence')
 sentence.innerHTML = spicy_object[random_key]['sentence'];
 
@@ -74,12 +101,7 @@ function check_answer(){
         //todo: filter out answer from alternatives so it is not displayed below
         //todo: select random alternatives rather than the first 3 
         input_field.style="display:None;"
-        message.innerHTML=`Good job! Also consider:
-        <ul class="list-group">
-        <li class="list-group-item">${alternatives[0]}</li>
-        <li class="list-group-item">${alternatives[1]}</li>
-        <li class="list-group-item">${alternatives[2]}</li>
-        </ul>`
+        message.innerHTML=`Good job! Also consider:${alternatives[0]}, ${alternatives[1]}, or ${alternatives[2]}.`
         message.style="display:flex;flex-direction:column;"
         buttons.innerHTML="<button class=\"btn btn-primary\" onclick=\"location.reload()\" >Try Another</button>"
         boring_phrase.innerHTML=answer;
