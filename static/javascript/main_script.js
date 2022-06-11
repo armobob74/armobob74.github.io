@@ -1,42 +1,51 @@
 const spicy_object = {
     pretty:{
-    alternatives:['ravishing', 'stunning', 'gorgeous','lovely','radiant','alluring','glamorous','glorious','flawless','luscious','striking','zingy','spicy','eye-catching','beautiful'],
+    alternatives:['ravishing', 'stunning', 'gorgeous','lovely','radiant','alluring','glamorous','glorious','flawless','luscious','striking','zingy'],
+    boring_synonyms:['beautiful','eye-catching'],
     sentence:'Ashli always looks <span id="boring_phrase">very pretty</span>.',
     },
 
     cold:{
-        alternatives:['algid', 'arctic', 'bone-chilling','brick', 'chilly', 'freezing', 'frigid', 'frosty', 'gelid', 'glacial', 'ice-cold', 'icy', 'nipping', 'nippy', 'numbing', 'polar', 'shivery','spicy', 'snappy', 'wintry'],
+        alternatives:['algid', 'arctic', 'bone-chilling','brick','freezing', 'frigid', 'frosty', 'gelid', 'glacial', 'ice-cold', 'icy', 'nipping', 'nippy', 'numbing', 'polar', 'shivery', 'snappy', 'wintry'],
+    boring_synonyms:['chilly'],
         sentence:'I want to leave this Starbucks, but it\'s <span id="boring_phrase">very cold</span> outside!',
     },
 
     nice:{
-        alternatives:['kind', 'selfless', 'befitting', 'correct', 'spicy', 'decent', 'decorous', 'genteel', 'polite', 'proper', 'respectable', 'seemly'],
+        alternatives:['kind', 'selfless', 'befitting', 'correct','decent', 'decorous', 'genteel', 'polite', 'proper', 'respectable', 'seemly'],
+    boring_synonyms:[],
         sentence:'I think Luigi is a <span id="boring_phrase">very nice</span> person.',
     },
 
 
     big:{
-        alternatives:['bulky', 'considerable', 'goodly', 'grand', 'great', 'handsome', 'hefty', 'hulking', 'husky', 'outsized', 'outsize', 'oversize', 'oversized', 'sizable', 'sizeable', 'substantial', 'voluminous', 'astronomical', 'astronomic', 'Brobdingnagian', 'Bunyanesque', 'cavernous', 'colossal', 'cosmic', 'cosmical', 'cyclopean', 'elephantine', 'enormous', 'galactic', 'gargantuan', 'gigantic', 'gross', 'spicy', 'hellacious', 'herculean', 'heroic', 'heroical', 'Himalayan', 'huge', 'humongous', 'humungous', 'immense', 'jumbo', 'king-size', 'king-sized', 'leviathan', 'major', 'mammoth', 'massive', 'monolithic', 'monstrous', 'monumental', 'mountainous', 'pharaonic', 'prodigious', 'staggering', 'stupendous', 'super', 'super-duper', 'supersized', 'titanic', 'tremendous', 'vast', 'vasty', 'walloping', 'whacking', 'whopping', 'excessive', 'exorbitant', 'extravagant', 'extreme', 'immoderate', 'inordinate', 'abundant', 'ample', 'appreciable', 'copious', 'plentiful', 'thicc', 'thick', 'capacious', 'commodious', 'spacious'],
+        alternatives:['grand', 'great',  'hefty', 'hulking', 'husky', 'outsized', 'outsize', 'oversize', 'oversized', 'substantial', 'voluminous', 'astronomical', 'astronomic', 'Brobdingnagian', 'Bunyanesque', 'cavernous', 'colossal', 'cosmic', 'cosmical', 'cyclopean', 'elephantine', 'enormous', 'galactic', 'gargantuan', 'gigantic','hellacious', 'herculean', 'heroic', 'heroical', 'Himalayan', 'huge', 'humongous', 'humungous', 'immense', 'jumbo', 'king-size', 'king-sized', 'leviathan', 'major', 'mammoth', 'massive', 'monolithic', 'monstrous', 'monumental', 'mountainous', 'pharaonic', 'prodigious', 'staggering', 'stupendous', 'super', 'super-duper', 'supersized', 'titanic', 'tremendous', 'vast', 'vasty', 'walloping', 'whacking', 'whopping', 'exorbitant', 'extravagant', 'inordinate', 'abundant', 'ample',   'thicc', 'thick', 'capacious', 'commodious'],
+    boring_synonyms:['bulky','considerable','goodly','handsome', 'sizable', 'sizeable','gross', 'excessive', 'immoderate', 'copious','appreciable','plentiful', 'spacious'],
         sentence:'When I opened the door, I realized that my new apartment was <span id="boring_phrase">very big</span>.',
     },
 
     calm:{
-        alternatives:['collected', 'composed', 'cool', 'coolheaded', 'equal', 'level', 'limpid', 'peaceful', 'placid', 'possessed', 'recollected', 'sedated', 'self-composed', 'self-possessed', 'serene', 'smooth', 'together', 'tranquil', 'undisturbed', 'unperturbed', 'unruffled', 'unshaken','spicy', 'untroubled', 'unworried'],
+        alternatives:['collected', 'composed', 'cool', 'coolheaded', 'equal', 'level',  'peaceful', 'placid', 'possessed', 'recollected', 'sedated', 'self-composed', 'self-possessed', 'serene',  'together', 'tranquil', 'undisturbed', 'unperturbed', 'unruffled', 'unshaken', 'untroubled', 'unworried'],
+    boring_synonyms:['limpid','smooth','relaxed'],
         sentence:'I feel <span id="boring_phrase">very calm</span> now that finals week is finally over.',
     },
 
     noisy:{
-        alternatives:['deafening', 'rambunctious', 'rowdy', 'dissonant', 'resounding', 'sonorous', 'clamorous', 'uproarious', 'blatant', 'blaring', 'booming', 'brassy', 'brazen', 'spicy','clanging', 'earsplitting', 'jangly'],
+        alternatives:['deafening', 'rambunctious', 'rowdy', 'dissonant', 'resounding', 'sonorous', 'clamorous', 'uproarious', 'blatant', 'blaring', 'booming', 'brassy', 'brazen','clanging', 'earsplitting', 'jangly'],
+    boring_synonyms:['loud'],
+    
         sentence:'I couldn\'t sleep because the neighbors were <span id="boring_phrase">very noisy</span> last night.',
     },
 
     busy:{
-        alternatives:['swamped', 'tied-up', 'overwhelmed','spicy', 'knee-deep', 'engrossed'],
+        alternatives:['swamped','overwhelmed','tied-up', 'knee-deep', 'engrossed'],
+        boring_synonyms:['occupied'],
         sentence:'I want to go to the game, but I\'m <span id="boring_phrase">very busy</span> this week.',
     },
 
     shiny:{
-        alternatives:['gleaming', 'beaming', 'bedazzling', 'brilliant', 'candescent', 'dazzling','glistening', 'glowing', 'incandescent', 'lambent', 'lucent', 'lucid', 'luminous', 'lustrous', 'radiant', 'sheeny','spicy', 'shining', 'splendid'],
+        alternatives:['gleaming', 'beaming', 'bedazzling', 'brilliant', 'dazzling','glistening', 'glowing', 'lambent', 'lucent',  'luminous', 'lustrous', 'radiant', 'sheeny', 'splendid'],
+        boring_synonyms:['shining','lucid', 'candescent', 'incandescent'],
         sentence:'The Crystal Palace was <span id="boring_phrase">very shiny</span>!',
     },
 
@@ -73,7 +82,10 @@ new_cookie = new_cookie.slice(0,new_cookie.length-1) //get rid of the extra comm
 
 console.log(keys_not_seen)
 document.cookie = 'keys_not_seen=' + new_cookie;
+
 var alternatives = spicy_object[random_key]['alternatives']
+var boring_synonyms = spicy_object[random_key]['boring_synonyms']
+
 var sentence = document.getElementById('sentence')
 sentence.innerHTML = spicy_object[random_key]['sentence'];
 
@@ -97,7 +109,7 @@ input_field.addEventListener("keyup", function(event) {
 function check_answer(){
     var answer = input_field.value.toLowerCase().replace(/\s/g,'')
     input_field.value=''
-    if(alternatives.includes(answer)){
+    if(alternatives.includes(answer) || answer == 'spicy'){
         var answer_index = alternatives.indexOf(answer)
         alternatives.splice(answer_index,1); // remove 1 value from alternatives starting at index answer_index
         input_field.style="display:None;"
@@ -124,7 +136,9 @@ function check_answer(){
         boring_phrase.innerHTML=answer;
         boring_phrase.class="success";
         boring_phrase.style="color:green"
-    } else{
+    } else if(answer in boring_synonyms){
+        input_field.placeholder = "Try something more impactful"
+    } else {
         input_field.placeholder="Please try again"
     }
 }
