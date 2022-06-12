@@ -136,7 +136,7 @@ function check_answer(){
         boring_phrase.innerHTML=answer;
         boring_phrase.class="success";
         boring_phrase.style="color:green"
-    } else if(answer in boring_synonyms){
+    } else if(boring_synonyms.includes(answer)){
         input_field.placeholder = "Try something more impactful"
     } else {
         input_field.placeholder="Please try again"
