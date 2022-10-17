@@ -132,7 +132,7 @@ function check_answer(){
 
         message.innerHTML=`Good job! Also consider: ${alt_1}, ${alt_2}, or ${alt_3}.`
         message.style="display:flex;flex-direction:column;"
-        buttons.innerHTML="<button class=\"btn btn-primary\" onclick=\"location.reload()\" >Try Another</button>"
+        buttons.innerHTML="<button class=\"btn contained-btn\" onclick=\"location.reload()\" >Try Another</button>"
         boring_phrase.innerHTML=answer;
         boring_phrase.class="success";
         boring_phrase.style="color:green"
@@ -152,7 +152,7 @@ function show_alternatives() {
          list_items = list_items + `<li class="list-group-item">${alternatives[i]}</li>`
         }
         message.innerHTML = `Next time, try:<ul class="list-group"> ${list_items} </ul>`
-        buttons.innerHTML="<button class=\"btn btn-primary\" onclick=\"location.reload()\" >Try Another</button>"
+        buttons.innerHTML="<button class=\"btn contained-btn\" onclick=\"location.reload()\" >Try Another</button>"
 
 }
 
